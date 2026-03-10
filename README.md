@@ -34,3 +34,16 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+6. Automatic Deployments
+From now on, every git push to main will automatically trigger a new deployment on Vercel.
+
+⚠️ One Important Note
+Since we precompiled 
+
+tailwind.css
+ locally to bypass macOS issues, if you ever add new Tailwind utility classes to your components, you'll need to regenerate them before pushing:
+
+bash
+cd ~/Desktop/"BestIVFCentrein Kolkata.com"
+./node_modules/.bin/tailwindcss -i src/app/globals.css -o src/app/tailwind.css
+git add -A && git commit -m "Regenerate tailwind.css" && git push
